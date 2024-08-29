@@ -17,6 +17,7 @@
 
   background: var(--blue);
   color: var(--offwhite);
+  margin: 2rem;
 }
 
 .app {
@@ -34,6 +35,7 @@ nav {
 .greeting {
   display: flex;
   align-items: center;
+  font-size: 2.5rem;
 }
 
 .greeting img {
@@ -42,6 +44,16 @@ nav {
 
 .social-links a {
   margin-right: 1rem;
+}
+
+.section h2 {
+    font-size: 2rem;
+}
+.section {
+    margin-top: 3rem;
+    width: 70%;
+    font-size: large;
+    margin-bottom: 4rem;
 }
 
 .about-me {
@@ -54,9 +66,18 @@ nav {
 }
 
 .about-me img {
-  width: 200px;
+  width: 300px;
   border-radius: 30px;
   margin-right: 2rem;
+}
+
+.about-me h3 {
+    font-size: 2rem;
+}
+
+.about-me p {
+    font-size: large;
+    margin-right: 3rem;
 }
 
 li::marker {
@@ -70,9 +91,9 @@ li::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  height: 20px;
-  margin-right: 1rem;
+  width: 30px;
+  height: 30px;
+  margin-right: .5rem;
 }
 ul {
   padding: 0;
@@ -84,7 +105,9 @@ li {
   display: flex;
   align-items: center;
   padding-top: 1rem;
+  font-size: 1.5rem;
 }
+
 
 li:first-child {
   padding-top: 0;
@@ -141,9 +164,57 @@ footer ul li::before {
 footer li,
 footer li:first-child {
   padding: 1rem;
+  font-size: 16px;
 }
 
 footer a {
   color: var(--offwhite);
   text-decoration: none;
+}
+
+
+@media (max-width: 932px) {
+
+    :root {
+        margin: 1rem;
+    }
+
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: none;
+        justify-content: center;
+    }
+
+    .container-greeting h1 {
+        font-size: 2rem;
+    }
+
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        order: -1;
+    }
+
+    .about-me {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .about-me-text h3 {
+        align-self: flex-start;
+        text-align: center;
+    }
+
+    .section {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+
+    .section h2 {
+        /* text-align: center; */
+    }
 }
